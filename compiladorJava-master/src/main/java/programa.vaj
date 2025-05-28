@@ -1,0 +1,39 @@
+int     contador;                 // KW_INT, IDENTIFIER, SEMICOLON
+float   pi = 3.1415;
+char    letra = 'Z';
+string  texto = "Olá, mundo!";
+void    func();
+
+// Operadores aritméticos e de incremento/decremento
+contador = contador + 1;          // ASSIGN, ARITH_OP, INC via +1
+contador++;                       // INC_DEC
+contador--;                       // INC_DEC
+
+// Expressões com comparação
+if contador >= 10 then            // KW_IF, COMP_OP, KW_THEN
+    texto = texto + ".";          // STR_LIT, ARITH_OP, STR_LIT
+else                              // KW_ELSE
+    texto = texto + "!";
+fi                                // KW_FI
+
+// Laços while e for
+while contador < 20              /* KW_WHILE, COMP_OP */
+{
+    contador = contador * 2;      // MULT
+}
+
+for (contador = 0; contador != 16; contador += 4)  // KW_FOR, SEMICOLON, COMP_OP, INC_DEC via +=
+{
+    // comentário dentro do laço
+    texto = texto + "\\n";         // sequência de escape em STRING
+}
+
+// Teste de colchetes e ponto
+int arr[3] = {1, 2, 3};           // LBRACK, RBRACK, LBRACE, COMMA, RBRACE
+float matriz[2][2];               // multidimensional
+
+// Acesso a array e função
+letra = arr[contador % 3];        // RBRACK, ARITH_OP (%)
+func();                           // chamada de função
+
+// Fim de arquivo
